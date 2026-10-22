@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darblens dashboard</title>
+    <link rel="icon" href="assets/images/header/favicon.ico">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/select2.css">
+    <link rel="stylesheet" href="assets/css/sarrona.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/48.5.0/ckeditor5.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+           <header class="header d-flex justify-content-between align-items-center py-2">
+
+
+                <div class="right-header d-flex align-items-center gap-3   ">
+                    <div class="logo d-none d-md-block  ">
+                        <a href="/"> <img class="w-100" src="assets/images/header/LOGO.png" alt=""></a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"> <i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type=" text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+
+
+                <div class="left-header d-flex align-items-center px-3 ">
+                    <div class="icons d-flex gap-3">
+
+                        <div class="messages-container position-relative" id="messages-container">
+                            <i class="fa-regular fa-envelope   envelope"></i>
+                            <ul class="messages-area  position-absolute text-center" id="messages-area ">
+                                <div class="messages-header">
+                                    <h3>أحدث الرسائل</h3>
+                                </div>
+                              
+                                    <li class="d-flex align-items-center justify-content-between position-relative" style="height: 70px;">
+                                        <div class="d-flex gap-2 item-menu-left">
+                                           <img src="assets/images/online/3.jfif" alt="">
+                                            <h2>محمد أحمد</h2>
+                                        </div>
+                                        <i class="fa-regular fa-comment "></i>
+
+                                        <div style="width: 10px; height: 10px;"
+                                            class="spinner-border text-success masseges-user" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+
+                                        <p class=" messages-info">لا تنسي اجتماع اليوم  الساعه 12 </p>
+                                    </li>
+
+                            
+                                    
+                               <a href="">كافة الرسائل</a>
+
+                            </ul>
+                        </div>
+
+
+
+
+                      
+                     <a class="position-relative bell"data-bs-toggle="offcanvas"  href="#side-notifications">
+                            <i class="fa-regular fa-bell" ></i>
+                        </a>
+                       
+                    </div>
+
+                    <div class="avatar m-r-10 m-l-10">
+                        <img width="40px" src="assets/images/header/avatar.jfif" alt="">
+                    </div>
+
+                    <a><i class="fa-solid fa-bars-staggered active-users" data-bs-toggle="offcanvas"
+                            href="#side-menu"></i></a>
+                </div>
+
+
+
+            </header>
+        </nav>
+
+
+
+
+
+        <!-- start sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90" src="assets/images/header/avatar.jfif" alt="">
+                <h3>ولاء كازو</h3>
+            </div>
+
+            <ul class="ul-sidebar">
+                <li class=" active">
+                    <i class="fa-solid fa-chart-pie "></i>
+                    <a href="index.html" class="m-r-10"> الصفحة الرئيسية</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-tags"></i>
+                    <a href="allproducts.html" class="m-r-10"> كافة المنتجات </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <a href="customers.html" class="m-r-10"> الزبائن </a>
+                </li>
+                  <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="orders.html" class="m-r-10"> الطلبات </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-blog"></i>
+                    <a href="blog.html" class="m-r-10"> المدونة </a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- end sidebar -->
+
+
+        <!-- start content -->
+        <div class="content p-3" id="content">
+            <div class="inner-contene">
+                <div class="container-fluid">
+                    <h1>اضافة خبر جديد </h1>
+
+
+                    <div class="row ">
+                        <div class="col">
+                            <div class="card news-card p-1">
+                                <form action="" class="news">
+                                    <div class="row ">
+                                        <div class="col md 6">
+                                            <label for="">اسم الخبر</label>
+                                            <input type="text" placeholder="ادخل اسم الخبر" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="">الاسم اللطيف </label>
+                                            <input type="text" placeholder="ادخل رابط المقال  " class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <label for="">التصنيف </label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected disabled class="option" \> اختيار التصنيف</option>
+                                                <option value="1" class="option">اقتصادية</option>
+                                                <option value="2" class="option">فنيه</option>
+                                                <option value="3" class="option">سياسيه</option>
+                                            </select>
+                                        </div>
+                                        <div class="col md 6">
+                                            <label for="">التاغات </label>
+                                            <select class="js-example-basic-multiple form-select " multiple="multiple"
+                                                name="states[]">
+                                                <option value="AL" style="color: aliceblue"">1 </option>
+                                                <option  style="color: aliceblue" value="AL"  >2 </option>
+                                                <option value="AL" style="color: aliceblue">3 </option>
+                                                <option value="AL" style="color: aliceblue">4 </option>
+                                                <option value="AL" style="color: aliceblue">5 </option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3 mt-2">
+                                                <label for="formFile" class="form-label" > تحميل صورة المقال</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3 mt-2">
+                                                <label for="formFile" class="form-label"> تحميل صورة البنر</label>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div >
+                                        <textarea class="form-control "  name="" id="editor"></textarea>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- start content -->
+
+
+    </div>
+
+
+
+
+        <!-- users on line list-->
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="side-menu" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"> كافة المستخدمين المتصلين</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50" src="assets/images/online/1.jfif" alt="">
+                    <h4>أحمد الأحمد</h4>
+                </div>
+                <div class="contact-info d-flex gap-2">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                </div>
+            </div>
+
+            <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50" src="assets/images/online/2.jfif" alt="">
+                    <h4>علي العلي </h4>
+                </div>
+                <div class="contact-info d-flex gap-2">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                </div>
+            </div>
+
+            <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50" src="assets/images/online/3.jfif" alt="">
+                    <h4>محمد أحمد </h4>
+                </div>
+                <div class="contact-info d-flex gap-2">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                </div>
+            </div>
+
+            <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50" src="assets/images/online/4.jfif" alt="">
+                    <h4>مرح العلي</h4>
+                </div>
+                <div class="contact-info d-flex gap-2">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                </div>
+            </div>
+
+            <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                    <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <img width="50" src="assets/images/online/5.jfif" alt="">
+                    <h4>خالدة علي </h4>
+                </div>
+                <div class="contact-info d-flex gap-2">
+                    <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                    <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- side-notifications الاشعارات ايقونة الجرس -->
+     <div class="offcanvas offcanvas-end" tabindex="-1" id="side-notifications" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel  ">  كافة الاشعارات </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+<!-- 1. إشعار طلب جديد -->
+<div class="notification-item notify-success">
+    <div class="notify-header">
+        <h6 class="notify-title">طلب جديد</h6>
+        <small class="notify-time">منذ دقيقتين</small>
+    </div>
+    <p class="notify-body">قام الزبون <strong class="highlight-text">زياد أحمد</strong> بإضافة طلب جديد بقيمة 95$</p>
+</div>
+
+<!-- 2. إشعار نفاد مخزون -->
+<div class="notification-item notify-warning">
+    <div class="notify-header">
+        <h6 class="notify-title">تنبيه المخزون</h6>
+        <small class="notify-time">منذ ساعة</small>
+    </div>
+    <p class="notify-body">المنتج الأفضل مبيعاً لديك شارف على النفاد، المتبقي 3 قطع فقط.</p>
+</div>
+
+<!-- 3. إشعار تحديث حالة طلب -->
+<div class="notification-item notify-info">
+    <div class="notify-header">
+        <h6 class="notify-title">شحن الطلب</h6>
+        <small class="notify-time">منذ 3 ساعات</small>
+    </div>
+    <p class="notify-body">تمت الموافقة وتغيير حالة الطلب رقم <strong class="highlight-text">#12</strong> إلى "مكتمل".</p>
+</div>
+
+<!-- 4. إشعار زبون جديد -->
+<div class="notification-item notify-primary">
+    <div class="notify-header">
+        <h6 class="notify-title">زبون جديد</h6>
+        <small class="notify-time">أمس</small>
+    </div>
+    <p class="notify-body">سجل زبون جديد باسم <strong class="highlight-text">هبة محمود</strong> في منصتك.</p>
+</div>
+
+<!-- 5. إشعار أمان -->
+<div class="notification-item notify-danger">
+    <div class="notify-header">
+        <h6 class="notify-title">حماية النظام</h6>
+        <small class="notify-time">قبل يومين</small>
+    </div>
+    <p class="notify-body">تم رصد محاولة تسجيل دخول غير مصرح بها للوحة التحكم من متصفح غريب.</p>
+</div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/select2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/"
+        }
+    }
+
+</script>
+
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Bold,
+        Italic,
+        Underline,
+        Strikethrough,
+        Subscript,
+        Superscript,
+        Font,
+        Paragraph,
+        CodeBlock,
+        Link,
+        List,
+        Image,
+        ImageToolbar,
+        ImageCaption,
+        ImageStyle,
+        ImageResize,
+        Table,
+        TableToolbar,
+        MediaEmbed,
+        BlockQuote,
+        Alignment,
+        Highlight,
+        RemoveFormat,
+        Heading,
+        TodoList,
+        Indent,
+        IndentBlock
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            plugins: [
+                Essentials, Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Font, Paragraph, CodeBlock,
+                Link, List, Image, ImageToolbar, ImageCaption, ImageStyle, ImageResize, Table, TableToolbar,
+                MediaEmbed, BlockQuote, Alignment, Highlight, RemoveFormat, Heading, TodoList, Indent, IndentBlock
+            ],
+            toolbar: {
+                items: [
+                    'undo', 'redo',
+                    '|',
+                    'heading',
+                    '|',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                    '|',
+                    'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'code',
+                    '|',
+                    'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                    '|',
+                    'alignment',
+                    '|',
+                    'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
+                    '|',
+                    'insertTable', 'mediaEmbed',
+                    '|',
+                    'highlight', 'removeFormat'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            image: {
+                toolbar: [
+                    'imageTextAlternative', 'toggleImageCaption', 'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', 'linkImage'
+                ]
+            },
+            table: {
+                contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+            },
+            language: {
+                lnguage: 'ar',
+                languageDirection: 'rtl'
+            }
+        })
+        .then(editor => {
+            console.log('Editor was initialized', editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+</body>
+
+</html>

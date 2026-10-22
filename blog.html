@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>darblens dashboard</title>
+    <link rel="icon" href="assets/images/header/favicon.ico">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/sarrona.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between align-items-center py-2">
+
+
+                <div class="right-header d-flex align-items-center gap-3   ">
+                    <div class="logo d-none d-md-block  ">
+                        <a href="/"> <img class="w-100" src="assets/images/header/LOGO.png" alt=""></a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"> <i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type=" text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+
+
+                <div class="left-header d-flex align-items-center px-3 ">
+                    <div class="icons d-flex gap-3">
+
+                        <div class="messages-container position-relative" id="messages-container">
+                            <i class="fa-regular fa-envelope   envelope"></i>
+                            <ul class="messages-area  position-absolute text-center" id="messages-area">
+                                <div class="messages-header">
+                                    <h3>أحدث الرسائل</h3>
+                                </div>
+
+                                <li class="d-flex align-items-center justify-content-between position-relative"
+                                    style="height: 70px;">
+                                    <div class="d-flex gap-2 item-menu-left">
+                                        <img src="assets/images/online/3.jfif" alt="">
+                                        <h2>محمد أحمد</h2>
+                                    </div>
+                                    <i class="fa-regular fa-comment "></i>
+
+                                    <div style="width: 10px; height: 10px;"
+                                        class="spinner-border text-success masseges-user" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+
+                                    <p class=" messages-info">لا تنسي اجتماع اليوم الساعه 12 </p>
+                                </li>
+
+
+
+                                <a href="">كافة الرسائل</a>
+
+                            </ul>
+                        </div>
+
+
+
+
+
+
+
+                        <a class="position-relative bell" data-bs-toggle="offcanvas" href="#side-notifications">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="avatar m-r-10 m-l-10">
+                        <img width="40px" src="assets/images/header/avatar.jfif" alt="">
+                    </div>
+
+                    <a><i class="fa-solid fa-bars-staggered active-users" data-bs-toggle="offcanvas"
+                            href="#side-menu"></i></a>
+                </div>
+
+
+
+            </header>
+        </nav>
+        <!-- end header -->
+
+        <!-- start sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="90" src="assets/images/header/avatar.jfif" alt="">
+                <h3>ولاء كازو</h3>
+            </div>
+
+            <ul class="ul-sidebar">
+                <li class=" active">
+                    <i class="fa-solid fa-chart-pie "></i>
+                    <a href="index.html" class="m-r-10"> الصفحة الئيسية</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-tags"></i>
+                    <a href="allproducts.html" class="m-r-10"> كافة المنتجات </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <a href="customers.html" class="m-r-10"> الزبائن </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="orders.html" class="m-r-10"> الطلبات </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-blog"></i>
+                    <a href="blog.html" class="m-r-10"> المدونة </a>
+                </li>
+
+
+            </ul>
+        </div>
+        <!-- end sidebar -->
+
+
+        <!-- start content -->
+        <div class="content p-3" id="content">
+            <div class="inner-contene">
+                <div class="container-fluid">
+                    <!-- start  bunner -->
+                    <section class="bunner" id="">
+
+                        <div class="  category-title">
+                            <h1>المدونة </h1>
+                        </div>
+                    </section>
+
+                    <!-- end  bunner -->
+
+
+
+                    <section>
+                        <div class="container">
+
+                            <div>
+                                <button class="navbar-toggler menu-icon p-3 m-3 " type="button"
+                                    data-bs-toggle="offcanvas" href="#blog-mini"
+                                    style="color: #ffffff; font-size: 20px; border: 1px solid #B95E34; border-radius: 15px;">
+                                    <i class="fa-solid fa-cart-arrow-down"></i>
+                                </button>
+                            </div>
+
+                            <div class="row blog ">
+                                <!-- <div class="col-md-4 blog-sidebar  d-none d-lg-block">
+                    <div class="sticky-lg-top">
+                        <h4 class=" mb-2 text-center">البحث</h4>
+                        <form action="">
+                            <div class="input-group d-flex flex-column">
+                                <input type="text" class="form-control w-100 " placeholder="البحث">
+                                <button class="btn w-100"> ابحث الآن</button>
+                            </div>
+                        </form>
+
+
+                        <div class="siderbar-title">
+                            <h4 class="mt-3 mb-2 text-center">أحدث المقالات</h4>
+                            <ul class=" d-flex flex-column gap-2">
+                                <li><a href=""> أفضل الاماكن السياحيه والتخييم في سوريا</a></li>
+                                <li><a href="">أفضل للكاميرات </a> </li>
+                                <li><a href="">كيف</a> </li>
+                                <li><a href="">كيف</a> </li>
+                            </ul>
+                        </div>
+
+                        <h4 mt-3 mb-2 text-center>اشترك لتصلك النشرة البريديه</h4>
+                        <form action="">
+                            <div class="input-group d-flex flex-column">
+                                <input type="text" class="form-control w-100 "
+                                    placeholder="اشترك لتصلك النشرة البريديه">
+                                <button class="btn w-100"> اشترك الآن</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div> -->
+
+                                <div class="col-md-11 blog-title">
+                                    <div class="row ">
+                                        <div class="col-12 ">
+                                            <div class="blog-card d-flex align-items-center">
+
+                                                <img width="25%" class="" src="/assets/images/blog/اوفر لاندينغ.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h3>تجهيزات الأوفر لاندينغ </h3>
+                                                    <p class="w-75">كل ما تحتاجه لرحلاتك: رفوف سيارات، خيم سطحية، أنظمة
+                                                        تخزين، وإضاءة خارجية. جهز سيارتك لأطول المغامرات البرية.
+                                                    </p>
+                                                    <a href=""> زيارة القسم</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="blog-card d-flex align-items-center">
+
+                                                <img width="25%" class="" src="assets/images/blog/خيمه.jpg" alt="">
+                                                <div>
+                                                    <h3>خيم</h3>
+                                                    <p class="w-75">خيم متنوعة تناسب جميع أنواع الرحلات: خيم أرضية، خيم
+                                                        سطحية للسيارات،
+                                                        وخيم فورية سهلة النصب. متينة ومقاومة للظروف الصحراوية.
+                                                    </p>
+                                                    <a href=""> زيارة القسم</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="blog-card d-flex align-items-center">
+
+                                                <img width="25%" class="" src="assets/images/blog/معدات الرحل.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h3>معدات الرحل </h3>
+                                                    <p class="w-75">معدات أساسية لكل رحال: حقائب ظهر متينة، أدوات ملاحة،
+                                                        إضاءة، وأدوات
+                                                        بقاء. صممت لتكون خفيفة وعملية في أصعب الظروف.</p>
+                                                    <a href=""> زيارة القسم</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="blog-card d-flex align-items-center">
+
+                                                <img width="25%" class="" src="assets/images/blog/كاميرات ومعدات.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h3>كاميرات ومعدات</h3>
+                                                    <p class="w-75">أحدث كاميرات ,ومعدات الكاميرات خفيفة الوزن، مقاومة
+                                                        للغبار والماء، مع
+                                                        تركيز تلقائي سريع وبطارية تدوم طويلاً. مثالية لمغامراتك البرية.
+                                                    </p>
+                                                    <a href=""> زيارة القسم</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="blog-card d-flex align-items-center">
+
+                                                <img width="25%" class="" src="assets/images/blog/ملابس.jpg" alt="">
+                                                <div>
+                                                    <h3>ملابس وأحذية </h3>
+                                                    <p class="w-75">ملابس وأحذية مصممة خصيصاً للسفر البري: جاكيتات خفيفة
+                                                        مقاومة للرياح،
+                                                        أحذية متينة، وقبعات للحماية من الشمس. راحة وأناقة في رحلاتك.</p>
+                                                    <a href=""> زيارة القسم</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="blog-card d-flex align-items-center">
+
+                                                <img width="25%" class="" src="assets/images/blog/مطبخ الرحلات.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h3>معدات الطهي </h3>
+                                                    <p class="w-75">كل ما تحتاجه للطهي في البر: مواقد غاز، أواني طهي
+                                                        خفيفة، أطقم أكل،
+                                                        وأدوات تحضير الطعام. استمتع بوجبات شهية في قلب الطبيعة.</p>
+                                                    <a href=""> زيارة القسم</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <h2 class="text-center   statistc-title"> إحصائيات درب لينس </h2>
+
+                                            <div class="   statistcs ">
+                                                <div
+                                                    class="row row-cols-1 row-cols-md-3 row-cols-lg-4  gap-2  flex-lg-nowrap mx-1  d-flex justify-content-around">
+
+
+                                                    <div class=" col card   align-items-center ">
+                                                        <i class="fa-solid fa-users"></i>
+                                                        <h4> عميل مستفيد </h4>
+                                                        <p class="">+20000 </p>
+                                                    </div>
+
+                                                    <div class="col card  align-items-center ">
+                                                        <i class="fa-solid fa-box"></i>
+                                                        <h4> منتج تم بيعه </h4>
+                                                        <p class="">+5000 </p>
+                                                    </div>
+
+
+                                                    <div class="col card  align-items-center ">
+                                                        <i class="fa-solid fa-jar"></i>
+                                                        <h4> أنواع منتجات متوفرة </h4>
+                                                        <p class="">+500 </p>
+                                                    </div>
+
+                                                    <div class="col card  align-items-center ">
+                                                        <i class="fa-solid fa-truck-fast"></i>
+                                                        <h4> منتج تم توصيله </h4>
+                                                        <p class="">+1000 </p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="container-fluid">
+                                <h2>كافة الاخبار</h2>
+                                <a href="add.post.html" type="button" class="btn add-btn  my-1">
+                                    اضافة خبر جديد
+                                </a>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card p-1 table-back">
+                                            <table id="blog-table" class="table table-hover display">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+
+                                                        <th scope="col">اسم الخبر</th>
+                                                        <th scope="col">التصنيف </th>
+                                                        <th scope="col">تاريخ النشر </th>
+                                                        <th scope="col"> الحالة </th>
+                                                        <th scope="col"> الصورة </th>
+                                                        <th scope="col"> العمليات </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+
+                                                    <tr>
+                                                        <th scope="row">1 </th>
+                                                        <td > تأثير الذكاء الصناعي على معدات التصوير الحديثة</td>
+                                                        <td>
+                                                            علوم حديثة
+                                                        </td>
+                                                        <td>2/4/2026</td>
+
+                                                        <td>
+                                                            <div style="width: 10px; height: 10px;"
+                                                                class="spinner-border text-success" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                            منشور
+                                                        </td>
+                                                        <td >
+                                                            <img class="rounded-circle " width="50%" src="assets/images/blog/خبر 1.jfif" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle"
+                                                                    href="#" role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    العمليات
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#delet-blog"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#delet-blog">
+                                                                            حذف المقال</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#edit-modal"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#edit-modal">
+                                                                            تعديل المنتج</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#"> عرض
+                                                                            المقال</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row">2 </th>
+                                                        <td> أفضل 5 كاميرات لرحلات السفاري عام 2026</td>
+                                                        <td>
+                                                            معدات تصوير
+                                                        </td>
+                                                        <td>5/4/2026</td>
+
+                                                        <td>
+                                                            <div style="width: 10px; height: 10px;"
+                                                                class="spinner-border text-success" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                            منشور
+                                                        </td>
+                                                        <td>
+                                                            <img   class="rounded-circle " width="50%" src="assets/images/blog/خبر 2.jfif" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle"
+                                                                    href="#" role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    العمليات
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#delet-blog"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#delet-blog">
+                                                                            حذف المقال</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#edit-modal"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#edit-modal">
+                                                                            تعديل المنتج</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#"> عرض
+                                                                            المقال</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row">3 </th>
+                                                        <td> دليلك الشامل للتخييم في الجبال خلال فصل الشتاء</td>
+                                                        <td>
+                                                            نصائح سفر
+                                                        </td>
+                                                        <td>10/4/2026</td>
+
+                                                        <td>
+                                                            <div style="width: 10px; height: 10px;"
+                                                                class="spinner-border text-success" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                            منشور
+                                                        </td>
+                                                        <td >
+                                                            <img class="rounded-circle " width="50%" src="assets/images/blog/خبر 3.jfif" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle"
+                                                                    href="#" role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    العمليات
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#delet-blog"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#delet-blog">
+                                                                            حذف المقال</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#edit-modal"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#edit-modal">
+                                                                            تعديل المنتج</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#"> عرض
+                                                                            المقال</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row">4 </th>
+                                                        <td>كيف تختار حقيبة الظهر المناسبة لرحلتك القادمة ؟</td>
+                                                        <td>
+                                                            معدات سفر
+                                                        </td>
+                                                        <td>10/4/2026</td>
+
+                                                        <td>
+                                                            <div style="width: 10px; height: 10px;"
+                                                                class="spinner-border text-warning" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                            مسودة
+                                                        </td>
+                                                        <td>
+                                                            <img  class="rounded-circle " width="50%" src="assets/images/blog/خبر 4.jfif" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle"
+                                                                    href="#" role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    العمليات
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#delet-blog"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#delet-blog">
+                                                                            حذف المقال</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#edit-modal"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#edit-modal">
+                                                                            تعديل المنتج</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#"> عرض
+                                                                            المقال</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row">5 </th>
+                                                        <td>مقارنة بين أفضل مواقد الطهي المحمولة</td>
+                                                        <td>
+                                                            معدات الطهي
+                                                        </td>
+                                                        <td>10/4/2026</td>
+
+                                                        <td>
+                                                            <div style="width: 10px; height: 10px;"
+                                                                class="spinner-border text-danger" role="status">
+                                                                <span class="visually-hidden">Loading...</span>
+                                                            </div>
+                                                            ملغي
+                                                        </td>
+                                                        <td >
+                                                            <img class="rounded-circle " width="50%" src="assets/images/blog/خبر 5.jfif" alt="">
+                                                        </td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <a class="btn btn-secondary btn-sm dropdown-toggle"
+                                                                    href="#" role="button" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    العمليات
+                                                                </a>
+
+                                                                <ul class="dropdown-menu">
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#delet-blog"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#delet-blog">
+                                                                            حذف المقال</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#edit-modal"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#edit-modal">
+                                                                            تعديل المنتج</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item" href="#"> عرض
+                                                                            المقال</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+                    <!-- نهايه  -->
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- start filter mini-md  -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="blog-mini" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="blog-mini">البحث والاشتراك </h5>
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body  ">
+                <div class=" blog-sidebar ">
+                    <div class="sticky-lg-top">
+                        <h4 class=" mb-2 text-center">البحث</h4>
+                        <form action="">
+                            <div class="input-group d-flex flex-column">
+                                <input type="text" class="form-control w-100 " placeholder="البحث">
+                                <button class="btn w-100"> ابحث الآن</button>
+                            </div>
+                        </form>
+
+
+                        <div class="siderbar-title">
+                            <h4 class="mt-3 mb-2 text-center " ">أحدث المقالات</h4>
+                        <ul class=" d-flex flex-column gap-2">
+                                <li><a href=""> أفضل الاماكن السياحيه والتخييم في سوريا</a></li>
+                                <li><a href="">أفضل للكاميرات </a> </li>
+
+                                </ul>
+                        </div>
+
+                        <h4 class=" mb-2 text-center">اشترك لتصلك النشرة البريديه</h4>
+                        <form action="">
+                            <div class="input-group d-flex flex-column">
+                                <input type="text" class="form-control w-100 "
+                                    placeholder="اشترك لتصلك النشرة البريديه">
+                                <button class="btn w-100"> اشترك الآن</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- end filter -->
+
+
+
+
+
+
+
+
+        <!-- مودال حذف منتج -->
+
+        <div class="modal fade" id="delet-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> حذف المقال</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+
+
+
+                            <div class="alert alert-danger">
+                                تأكيد عملية الحذف
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">تراجع</button>
+                                <button type="button" class="btn btn-primary">حذف </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- users on line list-->
+
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="side-menu" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel"> كافة المستخدمين المتصلين</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                    <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                        <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user"
+                            role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50" src="assets/images/online/1.jfif" alt="">
+                        <h4>أحمد الأحمد</h4>
+                    </div>
+                    <div class="contact-info d-flex gap-2">
+                        <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                        <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                    </div>
+                </div>
+
+                <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                    <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                        <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user"
+                            role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50" src="assets/images/online/2.jfif" alt="">
+                        <h4>علي العلي </h4>
+                    </div>
+                    <div class="contact-info d-flex gap-2">
+                        <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                        <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                    </div>
+                </div>
+
+                <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                    <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                        <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user"
+                            role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50" src="assets/images/online/3.jfif" alt="">
+                        <h4>محمد أحمد </h4>
+                    </div>
+                    <div class="contact-info d-flex gap-2">
+                        <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                        <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                    </div>
+                </div>
+
+                <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                    <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                        <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user"
+                            role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50" src="assets/images/online/4.jfif" alt="">
+                        <h4>مرح العلي</h4>
+                    </div>
+                    <div class="contact-info d-flex gap-2">
+                        <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                        <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                    </div>
+                </div>
+
+                <div class="item-side-menu d-flex align-items-center justify-content-between mb-2">
+                    <div class="avatar-info d-flex align-items-center justify-content-between position-relative">
+                        <div style="width: 10px; height: 10px;" class="spinner-border text-success grow-user"
+                            role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <img width="50" src="assets/images/online/5.jfif" alt="">
+                        <h4>خالدة علي </h4>
+                    </div>
+                    <div class="contact-info d-flex gap-2">
+                        <i class="fa-brands fa-square-whatsapp whatsapp-icon"></i>
+                        <i class="fa-brands fa-facebook-messenger messenger-icon "></i>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <!-- side-notifications الاشعارات ايقونة الجرس -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="side-notifications"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel "> كافة الاشعارات </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                <!-- 1. إشعار طلب جديد -->
+                <div class="notification-item notify-success">
+                    <div class="notify-header">
+                        <h6 class="notify-title">طلب جديد</h6>
+                        <small class="notify-time">منذ دقيقتين</small>
+                    </div>
+                    <p class="notify-body">قام الزبون <strong class="highlight-text">زياد أحمد</strong> بإضافة طلب جديد
+                        بقيمة 95$</p>
+                </div>
+
+                <!-- 2. إشعار نفاد مخزون -->
+                <div class="notification-item notify-warning">
+                    <div class="notify-header">
+                        <h6 class="notify-title">تنبيه المخزون</h6>
+                        <small class="notify-time">منذ ساعة</small>
+                    </div>
+                    <p class="notify-body">المنتج الأفضل مبيعاً لديك شارف على النفاد، المتبقي 3 قطع فقط.</p>
+                </div>
+
+                <!-- 3. إشعار تحديث حالة طلب -->
+                <div class="notification-item notify-info">
+                    <div class="notify-header">
+                        <h6 class="notify-title">شحن الطلب</h6>
+                        <small class="notify-time">منذ 3 ساعات</small>
+                    </div>
+                    <p class="notify-body">تمت الموافقة وتغيير حالة الطلب رقم <strong
+                            class="highlight-text">#12</strong> إلى "مكتمل".</p>
+                </div>
+
+                <!-- 4. إشعار زبون جديد -->
+                <div class="notification-item notify-primary">
+                    <div class="notify-header">
+                        <h6 class="notify-title">زبون جديد</h6>
+                        <small class="notify-time">أمس</small>
+                    </div>
+                    <p class="notify-body">سجل زبون جديد باسم <strong class="highlight-text">هبة محمود</strong> في
+                        منصتك.</p>
+                </div>
+
+                <!-- 5. إشعار أمان -->
+                <div class="notification-item notify-danger">
+                    <div class="notify-header">
+                        <h6 class="notify-title">حماية النظام</h6>
+                        <small class="notify-time">قبل يومين</small>
+                    </div>
+                    <p class="notify-body">تم رصد محاولة تسجيل دخول غير مصرح بها للوحة التحكم من متصفح غريب.</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+ <script src="assets/js/datatables.js"></script>
+        <script src="assets/js/charts.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>
